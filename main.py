@@ -33,7 +33,7 @@ def generate_content(client: OpenAI, messages: List) -> ChatCompletion:
 
 
 def loop(args, messages):
-    for _ in range(5):
+    for _ in range(20):
         response: ChatCompletion = generate_content(client, messages)
         response_message = response.choices[0].message
         messages.append(response_message)
